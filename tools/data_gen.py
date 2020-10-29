@@ -96,6 +96,8 @@ if __name__ == "__main__":
         anno_types = [int(val) for val in args.anno_type]
         for dset_name in dset_names:
             for atype in anno_types:
+                target_dname = 'data/%s_%s' % (dset_name, atype)
+                print('synthesizing ' + target_dname)
                 synthesize_ws_dataset.main(dset_name, atype)
 
     anno_types = [('dil%s' % at if isInteger(at) else at) for at in args.anno_type]
@@ -106,6 +108,7 @@ if __name__ == "__main__":
         for dset_name in dset_names:
             for atype in anno_types:
                 target_dname = 'data/%s_%s' % (dset_name, atype)
+                print('deepcrack ' + target_dname)
                 convDeepcrack(target_dname, dset_name)
                 dispatchDeepcrack(target_dname, 'models/deepcrack')
 
@@ -115,6 +118,7 @@ if __name__ == "__main__":
         for dset_name in dset_names:
             for atype in anno_types:
                 target_dname = 'data/%s_%s' % (dset_name, atype)
+                print('deeplab ' + target_dname)
                 convDeeplab(target_dname, dset_name)
                 dispatchDeeplab(target_dname, 'models/deeplab/research/deeplab')
 

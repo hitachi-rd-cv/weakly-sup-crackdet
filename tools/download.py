@@ -14,6 +14,10 @@ def mkdir(dname):
 def populate(from_dname, to_dname, proc_fn, prefix='', suffix='',
              extension='.png'):
     for f_fname in os.listdir(from_dname):
+        f_extname = os.path.splitext(f_fname)[1]
+        if f_extname.lower() not in ['.png', '.jpg', '.jpeg', '.seg']:
+            continue
+
         abs_from_fname = os.path.join(from_dname, f_fname)
         basename = os.path.splitext(f_fname)[0]
         to_fname = os.path.join(
@@ -117,8 +121,10 @@ def check():
 
 
 if __name__ == "__main__":
+    print('Aigle')
     processAigle()
+    print('CFD')
     processCFD()
+    print('DCD')
     processDCD()
     check()
-    os.system('chown -R 1001 .')

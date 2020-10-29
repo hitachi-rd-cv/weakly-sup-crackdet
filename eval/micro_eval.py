@@ -106,6 +106,6 @@ if __name__ == '__main__':
     applyCV2Dir(dirname, infdir_name, procdir_none_name, use_clahe=False,
                 overwrite_file=overwrite_file, data_reconstruct=False)
 
-    # print('evaluating the models')
+    print('evaluating the models')
     evalDir(dirname, 100, infdir_name, procdir_none_name, pix_tols=[0],
             overwrite_file=overwrite_file)

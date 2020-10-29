@@ -1,10 +1,10 @@
 import os
 from datetime import datetime
 
-from matplotlib import cm
-import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('Agg')
+from matplotlib import cm
+import matplotlib.pyplot as plt
 
 import pandas as pd
 import numpy as np

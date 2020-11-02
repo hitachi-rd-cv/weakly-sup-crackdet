@@ -193,10 +193,3 @@ def main(ori_logdir, img_out_logdir, tf_out_logdir):
         semantic_segmentation_folder=semantic_segmentation_folder,
         list_folder=list_folder,
         label_format='png', image_format='png')
-
-
-if __name__ == '__main__':
-    ori_logdir = '../../../../../crack_dataset/paper_dataset/processed/aigle_rougher_annotation'
-    img_out_logdir = '../datasets/data/aigle_rougher_annotation'
-    tf_out_logdir = '../datasets/data/tfrecords/aigle_rougher_annotation'
-    main(ori_logdir, img_out_logdir, tf_out_logdir)

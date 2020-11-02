@@ -12,9 +12,6 @@ cd ../..
 
 PRETRAIN_DIR=models/deeplab/research/deeplab/datasets/pascal_voc_seg/init_models
 mkdir -p ${PRETRAIN_DIR}
-# wget http://download.tensorflow.org/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz -O ${PRETRAIN_DIR}/xception.tar.gz
-# tar -xzf ${PRETRAIN_DIR}/xception.tar.gz -C ${PRETRAIN_DIR}
-# rm ${PRETRAIN_DIR}/xception.tar.gz
 
 # format the models
 python3 tools/setup_models.py --deepcrack --deeplab

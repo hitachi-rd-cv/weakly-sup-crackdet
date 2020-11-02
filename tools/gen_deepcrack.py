@@ -100,24 +100,3 @@ def main(ori_logdir, out_logdir, target_sz):
                 cv2.imwrite(to_name, img)
 
             # shutil.copy(from_name, to_name)
-
-
-if __name__ == '__main__':
-    # for i in ['cfd', 'aigle', 'deepcrack']:
-    dataset_name = 'aigle'
-    target_sz = {'aigle': (462, 311), 'cfd': None, 'deepcrack': None}
-    # for ii in range(1, 5):
-    #     ori_logdir = '../../wacv_dataset/paper_dataset/processed/manipulated/%s_dil%d' % (dataset_name, ii)
-    #     out_logdir = '%s_dil%d' % (dataset_name, ii)
-    #     main(ori_logdir, out_logdir, target_sz)
-
-    for dataset_name in ['cfd', 'aigle', 'deepcrack']:
-        folder_name = '%s_dil_12' % dataset_name
-        ori_logdir = '../../wacv_dataset/paper_dataset/processed/manipulated/%s' % folder_name
-        out_logdir = '%s' % folder_name
-        main(ori_logdir, out_logdir, target_sz[dataset_name])
-
-        folder_name = '%s_dil_14' % dataset_name
-        ori_logdir = '../../wacv_dataset/paper_dataset/processed/manipulated/%s' % folder_name
-        out_logdir = '%s' % folder_name
-        main(ori_logdir, out_logdir, target_sz[dataset_name])

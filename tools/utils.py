@@ -36,4 +36,3 @@ def makeDir(dirname):
             os.makedirs(d)
         except:
             pass
-

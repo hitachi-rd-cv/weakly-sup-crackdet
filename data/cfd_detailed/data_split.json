@@ -1,27 +1,4 @@
 {
-    "gt_directory": ".",
-    "input_directory": ".",
-    "stats": {
-        "color_avg": {
-            "b_mean": 138.80271718616976,
-            "g_mean": 133.87657064180817,
-            "r_mean": 129.7203943323239
-        },
-        "sizes": {
-            "test": {
-                "cracks": 0,
-                "non_cracks": 0
-            },
-            "train": {
-                "cracks": 759441,
-                "non_cracks": 44226159
-            },
-            "val": {
-                "cracks": 0,
-                "non_cracks": 0
-            }
-        }
-    },
     "test": {
         "gt": [
             "002_gt.png",

@@ -1,6 +1,6 @@
 # Crack Detection as a Weakly-Supervised Problem: Towards Achieving Less Annotation-Intensive Crack Detectors
 
-Official repository of our [ICPR2020 paper]().
+Official repository of our ICPR2020 paper, "Crack Detection as a Weakly-Supervised Problem: Towards Achieving Less Annotation-Intensive Crack Detectors."
 
 You will find the following in this repository:
 
@@ -38,13 +38,13 @@ Downloaded datasets should be available under ```data/*_detailed```, where ```*`
 
 ### Low Quality Annotation Repo
 
-The proposed method was tested with various low quality annotations. Both manual and synthetic annotations are available through the [Zenodo repo](). After downloading the datasets, please locate them under ```data``` directory. Also note that the downloaded dataset only contains the annotations. Please run the following line to copy the RGB input images from the ```data/*_detailed``` directories.
+The proposed method was tested with various low quality annotations. Both manual and synthetic annotations are available through the [Zenodo repo](https://zenodo.org/record/4244084#.X6KE0mj7SUk). After downloading the datasets, please locate them under ```data``` directory. Also note that the downloaded dataset only contains the annotations. Please run the following line to copy the RGB input images from the ```data/*_detailed``` directories.
 
 ```shell
 python tools/data_gen.py --fill
 ```
 
-The Zenodo repo also contains ```pascal_voc_seg``` folder, which contains the pretrained Xception backbone for DeepLab. Place the folder under ```tools/model_supp/deeplab/datasets/pascal_voc_seg/init_models/deeplabv3_pascal_train_aug```.
+The Zenodo repo also contains ```pascal_voc_seg``` folder, which contains the pretrained Xception backbone for DeepLab. Place the folder under ```tools/model_supp/deeplab/datasets/pascal_voc_seg/```.
 
 
 
@@ -191,6 +191,6 @@ Our project is built from the following repositories. Thanks you for your great 
   - [DeepCrack](https://github.com/yhlleo/DeepSegmentor)
   - [DeepLab](https://github.com/tensorflow/models/tree/master/research/deeplab)
 - Datasets
-  - [Aigle]()
-  - [Crack Forest Dataset]()
+  - [Aigle](https://www.irit.fr/~Sylvie.Chambon/AigleRN_GT.html)
+  - [Crack Forest Dataset](https://github.com/cuilimeng/CrackForest-dataset)
   - [DeepCrack](https://github.com/yhlleo/DeepCrack)

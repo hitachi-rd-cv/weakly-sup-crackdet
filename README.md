@@ -173,13 +173,15 @@ The result for all model results can be aggregated using the ```gen_table.py``` 
 ## Citation
 
 Please consider citing our paper if it helps your research:
-​```
+
+```
 @inproceedings{inoue2020crack,
     title={Crack Detection as a Weakly-Supervised Problem: Towards Achieving Less Annotation-Intensive Crack Detectors},
     author={Inoue, Yuki and Nagayoshi, Hiroto},
     booktitle={International Conference on Pattern Recognition (ICPR)},
     year={2020},
-}​```
+}
+```
 
 
 

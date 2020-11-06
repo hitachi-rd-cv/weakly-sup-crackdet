@@ -1,6 +1,6 @@
 # Crack Detection as a Weakly-Supervised Problem: Towards Achieving Less Annotation-Intensive Crack Detectors
 
-Official repository of our ICPR2020 paper, "Crack Detection as a Weakly-Supervised Problem: Towards Achieving Less Annotation-Intensive Crack Detectors." [arxiv](https://arxiv.org/pdf/2011.02208.pdf)
+Official repository of our ICPR2020 paper, "Crack Detection as a Weakly-Supervised Problem: Towards Achieving Less Annotation-Intensive Crack Detectors." [arxiv](https://arxiv.org/abs/2011.02208)
 
 You will find the following in this repository:
 

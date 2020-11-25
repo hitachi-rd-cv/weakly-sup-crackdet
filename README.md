@@ -9,6 +9,7 @@ You will find the following in this repository:
 - Codes to generate your own synthetic annotations
 - Setup script for the two crack detector OSS's used in the paper (DeepCrack and DeepLab v3)
 
+Got no time to read? [Here](tldr.md) is a condensed README that lists the necessary commands to get you started.
 
 
 ## Requirements

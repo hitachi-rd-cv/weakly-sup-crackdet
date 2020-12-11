@@ -23,7 +23,7 @@ RUN pip install numpy==1.16.4 matplotlib==2.2.4 scikit-image pillow scipy pyyaml
 # DeepLab V3+
 RUN pip install tensorflow-gpu==$TENSORFLOW_VERSION
 RUN pip3 install scipy==1.3.0 numpy==1.15.0 matplotlib==2.2.4 pillow==6.1.0
-RUN pip3 install scikit-image==0.15.0 pyyaml cython opencv-python==4.1.0.25 futures==3.2.0
+RUN pip3 install scikit-image==0.15.0 pyyaml cython opencv-python==4.1.0.25 futures==3.1.1
 RUN pip3 install tensorflow-gpu==$TENSORFLOW_VERSION
 
 # download the object detection git

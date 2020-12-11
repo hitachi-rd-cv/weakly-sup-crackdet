@@ -15,6 +15,7 @@ Got no time to read? [Here](tldr.md) is a condensed README that lists the necess
 ## Requirements
 
 Experiments were conducted on Ubuntu 18.04 with Python 3.6.9 and CUDA9. Other dependencies are summarized in ```requirements.txt```.
+Be aware that GPUs with Turing architecture, such as RTX series are not compatible with CUDA9.
 
 
 ## Data Preparation

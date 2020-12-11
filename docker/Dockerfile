@@ -41,6 +41,6 @@ RUN pip install https://download.pytorch.org/whl/cu90/torch-0.4.1-cp36-cp36m-lin
 RUN pip install torchvision==0.2.1 visdom==0.1.7 dominate==2.3.1
 
 # for generating low quality annotations
-RUN apt install python3-tk
-RUN pip uninstall opencv-python opencv-python-headless opencv-contrib-python
+RUN apt install -y python3-tk
+RUN pip uninstall -y opencv-python opencv-python-headless opencv-contrib-python
 RUN pip install albumentations sklearn opencv-contrib-python pandas

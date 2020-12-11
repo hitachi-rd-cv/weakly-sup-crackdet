@@ -39,7 +39,7 @@ If README is too long to read, here is the stripped down version that just lists
 6. Set up the repos for the crack detectors
 
    ```bash
-   ./tools/setup_models.sh
+   ./tools/setup_models.sh --deepcrack --deeplab
    ```
 
 

@@ -87,7 +87,7 @@ This script also copies the formatted annotations to the correct data directorie
 Run the following script to download and modify the crack detector repos.
 
 ```shell
-./tools/setup_models.sh
+./tools/setup_models.sh --deepcrack --deeplab
 ```
 
 This script should correctly set up the two crack detector repos under ```models``` directory. Please refer to the following sections for more details on what the script does.

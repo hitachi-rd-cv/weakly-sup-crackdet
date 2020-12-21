@@ -1,0 +1,12 @@
+[submodule "models/deepcrack"]
+	path = models/deepcrack
+	url = http://github.com/yhlleo/DeepSegmentor
+[submodule "models/deeplab"]
+	path = models/deeplab
+	url = http://github.com/tensorflow/models
+[submodule "data/cfd_github"]
+	path = data/cfd_github
+	url = https://github.com/cuilimeng/CrackForest-dataset
+[submodule "data/deepcrack_github"]
+	path = data/deepcrack_github
+	url = https://github.com/yhlleo/DeepCrack.git

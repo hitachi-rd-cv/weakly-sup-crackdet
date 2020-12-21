@@ -113,6 +113,12 @@ def calcDensityStats(density_list):
     print('\n'.join(cum_list))
 
 
+def getCorrectImgExt(png_fname):
+    if not os.path.isfile(png_fname):
+        return png_fname.replace('png', 'jpg')
+    return png_fname
+
+
 if __name__ == "__main__":
     # # convert extension in a directory
     # # annotated images should end with "_annotated.png"

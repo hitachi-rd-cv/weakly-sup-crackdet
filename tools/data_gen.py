@@ -63,10 +63,10 @@ def fillDataset(dirname):
 
         # check if the directory needs to be filled
         # by checking if the directory contains the 'original' folder
-        if 'original' in os.listdir(abs_dname):
+        dset_name = dname.split('_')[0]
+        if ('original' in os.listdir(abs_dname)) or (dset_name not in ['aigle', 'cfd', 'deepcrack']) or ('github' in abs_dname):
             continue
 
-        dset_name = dname.split('_')[0]
         from_dname = os.path.join(dirname, dset_name + '_detailed')
         for dname in ['original', 'data_split.json']:
             fromname = os.path.join(from_dname, dname)

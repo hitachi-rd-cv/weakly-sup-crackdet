@@ -1,5 +1,9 @@
 # Crack Detection as a Weakly-Supervised Problem: Towards Achieving Less Annotation-Intensive Crack Detectors
 
+### :warning:There are few bugs in commits earlier than Decenber 18, 2020. Please clone the newest commit to avoid having to debug them yourself.
+
+
+
 Official repository of our ICPR2020 paper, "Crack Detection as a Weakly-Supervised Problem: Towards Achieving Less Annotation-Intensive Crack Detectors." [arxiv](https://arxiv.org/abs/2011.02208)
 
 You will find the following in this repository:
@@ -36,6 +40,14 @@ These datasets are publicly available through different websites and GitHub repo
 
 Downloaded datasets should be available under ```data/*_detailed```, where ```*``` stands for the name of the dataset.
 
+- This script downloads images from different websites, and thus it may fail depending on the internet connections. Refer below for backup steps:
+- Fails on the ```curl``` call to https://www.irit.fr/~Sylvie.Chambon/AigleRN_GT.html
+  - Go to the website, copy the html and place it under ```data/aigle_github/tmp.html```
+- Fails on the ```git clone``` call to CrackForest-dataset repo
+  - download the zip file from the website and extract it under ```data/cfd_github```
+- Fails on the ```git clone``` call to DeepCrack repo
+  - download the ```dataset/DeepCrack.zip``` file to ```data/deepcrack_github/dataset/DeepCrack.zip```
+
 
 
 ### Low Quality Annotation Repo
@@ -45,6 +57,8 @@ The proposed method was tested with various low quality annotations. Both manual
 ```shell
 python tools/data_gen.py --fill
 ```
+
+:warning: Make sure that all folders under ```data``` directory start with ```aigle_```, ```cfd_```, or ```deepcrack_```
 
 The Zenodo repo also contains ```pascal_voc_seg``` folder, which contains the pretrained Xception backbone for DeepLab. Place the folder under ```tools/model_supp/deeplab/datasets/pascal_voc_seg/```.
 
@@ -98,14 +112,7 @@ This script should correctly set up the two crack detector repos under ```models
 
 ### [DeepCrack](https://github.com/yhlleo/DeepSegmentor)
 
-We use the ```50440b52ddaf49cf54c2415e6b40646a7601c219``` commit of the DeepCrack repo. After the repository is cloned and checked out, the following files are modified (i.e. copied from ```tools/model_supp/deepcrack``` directory):
-
-```
-models/deepcrack_model.py
-options/train_options.py
-```
-
-You can see the details of the modifications in ```tools/model_supp/deepcrack```.
+We use the ```50440b52ddaf49cf54c2415e6b40646a7601c219``` commit of the DeepCrack repo. ```./tools/setup_models.sh``` clones and checks out the repo and modifies the repo by copying over files under ```tools/model_supp/deepcrack```.
 
 #### Training
 
@@ -123,19 +130,16 @@ For more details on training and evaluation, please refer to the original reposi
 
 ### [DeepLab](https://github.com/tensorflow/models/tree/master/research/deeplab)
 
-We use the ```0a161121852ee5f34b939279d54b5d3e231ca501``` commit of the DeepLab repo (sorry it is an old commit, the recent repository uses TF v2 instead of v1). After the repository is cloned and checked out, the following files are modified (i.e. copied from ```tools/model_supp/deepcrack``` directory):
-
-```
-research/deeplab/datasets/segmentation_dataset.py
-research/deeplab/utils/train_utils.py
-research/deeplab/train.py
-research/deeplab/export_model.py
-research/deeplab/model.py
-```
-
-You can see the details of the modifications in ```tools/model_supp/deeplab```.
+We use the ```0a161121852ee5f34b939279d54b5d3e231ca501``` commit of the DeepLab repo (sorry it is an old commit, the recent repository uses TF v2 instead of v1). ```./tools/setup_models.sh``` clones and checks out the repo and modifies the repo by copying over files under ```tools/model_supp/deeplab```.
 
 #### Training
+
+Before training the model, this repo requires that $PYTHONPATH environment variable is properly set. Run the following lines:
+
+```bash
+cd models/deeplab/research
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+```
 
 You can train the DeepLab model by running ```scripts/train.sh``` from ```models/deeplab/research/deeplab``` directory. Modify the script accordingly to train the model with various annotations.
 The training results are saved under the ```outputs``` directory.

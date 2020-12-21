@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 
 from utils import rescaleTo1, rescaleTo255, min0max1scale, \
-    convertFnameDomains, makeDir
+    convertFnameDomains, makeDir, getCorrectImgExt
 
 
 def intensityScore2(src_img, front_mask=None, use_clahe=True):
@@ -38,7 +38,7 @@ def main_dirinput(fname, outdir, rough_inf_dir, mask_thresh=0.6,
 
 def main(fname, out_fname, pred_fname, mask_thresh=0.6,
          use_clahe=True):
-    in_img = cv2.imread(fname)
+    in_img = cv2.imread(getCorrectImgExt(fname.replace('dc', 'deepcrack')))
     in_img_1ch = cv2.cvtColor(in_img, cv2.COLOR_BGR2GRAY)
 
     pred_img = cv2.imread(pred_fname, cv2.IMREAD_GRAYSCALE)

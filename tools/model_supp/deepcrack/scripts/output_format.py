@@ -60,4 +60,8 @@ if __name__ == '__main__':
             dst_fname = os.path.join(out_gf_dir, fuse_fname)
             shutil.copy(src_fname, dst_fname)
 
-    shutil.rmtree(os.path.join(log_dir, 'web/images'))
+    # cleanup
+    try:
+        shutil.rmtree(os.path.join(log_dir, 'web/images'))
+    except:
+        pass

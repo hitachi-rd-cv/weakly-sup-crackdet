@@ -64,6 +64,7 @@ def evalDir(dirname, num_ste=100, infdir_name='sample_imgs/test_output',
         for cand in dataset_cands:
             dataset_str = os.path.basename(log_name).split('_')[-1]
             dset_name = cand if (cand in dataset_str) else dset_name
+        dset_name = 'deepcrack' if dset_name == 'dc' else dset_name
         anno_dir = os.path.join('data/%s_detailed/gt' % dset_name)
 
         for infdir in [procdir, preddir]:

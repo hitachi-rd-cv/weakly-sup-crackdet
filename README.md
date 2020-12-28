@@ -1,6 +1,6 @@
 # Crack Detection as a Weakly-Supervised Problem: Towards Achieving Less Annotation-Intensive Crack Detectors
 
-### :warning:There are few bugs in commits earlier than Decenber 18, 2020. Please clone the newest commit to avoid having to debug them yourself.
+### :warning:There are few bugs in commits earlier than Decenber 28, 2020. Please clone the newest commit to avoid having to debug them yourself.
 
 
 

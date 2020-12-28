@@ -8,15 +8,15 @@ awk '$0="https://www.irit.fr/~Sylvie.Chambon/TITS/"$0' data/aigle_github/tmp.txt
 grep -oh 'GROUND_TRUTH/AIGLE_RN/.*png' data/aigle_github/tmp.html > data/aigle_github/tmp.txt
 awk '$0="https://www.irit.fr/~Sylvie.Chambon/TITS/"$0' data/aigle_github/tmp.txt | wget -P data/aigle_github/gt -i-
 
-# Crack Forest Dataset
-git clone https://github.com/cuilimeng/CrackForest-dataset data/cfd_github
+# # Crack Forest Dataset
+# git clone https://github.com/cuilimeng/CrackForest-dataset data/cfd_github
 
-# DeepCrack Dataset
-git clone https://github.com/yhlleo/DeepCrack.git data/deepcrack_github
-unzip data/deepcrack_github/dataset/DeepCrack.zip -d data/deepcrack_github/dataset
+# # DeepCrack Dataset
+# git clone https://github.com/yhlleo/DeepCrack.git data/deepcrack_github
+# unzip data/deepcrack_github/dataset/DeepCrack.zip -d data/deepcrack_github/dataset
 
 # format the images
 python3 tools/download.py
 
-# clean up
-# rm -rf data/*_github
+# # clean up
+# # rm -rf data/*_github

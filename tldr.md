@@ -9,7 +9,7 @@ If README is too long to read, here is the stripped down version that just lists
 1. Clone the repo
 
    ```bash
-   git clone https://github.com/hitachi-rd-cv/weakly-sup-crackdet.git
+   git clone --recursive https://github.com/hitachi-rd-cv/weakly-sup-crackdet.git
    ```
 
 2. Download the RGB images and the Precise Annotations
@@ -21,11 +21,7 @@ If README is too long to read, here is the stripped down version that just lists
    - This script downloads images from different websites, and thus it may fail depending on the internet connections. Refer below for backup steps:
    - Fails on the ```curl``` call to https://www.irit.fr/~Sylvie.Chambon/AigleRN_GT.html
      - Go to the website, copy the html and place it under ```data/aigle_github/tmp.html```
-   - Fails on the ```git clone``` call to CrackForest-dataset repo
-     - download the zip file from the website and extract it under ```data/cfd_github```
-   - Fails on the ```git clone``` call to DeepCrack repo
-     - download the ```dataset/DeepCrack.zip``` file to ```data/deepcrack_github/dataset/DeepCrack.zip```
-
+   
 3. Download the low quality annotations from Zenodo repo, and copy them to the "data" directory
 
    ```bash

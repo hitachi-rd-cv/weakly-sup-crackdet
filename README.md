@@ -15,6 +15,14 @@ You will find the following in this repository:
 
 Got no time to read? [Here](tldr.md) is a condensed README that lists the necessary commands to get you started.
 
+Start the installation process with cloning this repo:
+
+```bash
+git clone --recursive https://github.com/hitachi-rd-cv/weakly-sup-crackdet.git
+```
+
+
+
 
 ## Requirements
 
@@ -43,10 +51,6 @@ Downloaded datasets should be available under ```data/*_detailed```, where ```*`
 - This script downloads images from different websites, and thus it may fail depending on the internet connections. Refer below for backup steps:
 - Fails on the ```curl``` call to https://www.irit.fr/~Sylvie.Chambon/AigleRN_GT.html
   - Go to the website, copy the html and place it under ```data/aigle_github/tmp.html```
-- Fails on the ```git clone``` call to CrackForest-dataset repo
-  - download the zip file from the website and extract it under ```data/cfd_github```
-- Fails on the ```git clone``` call to DeepCrack repo
-  - download the ```dataset/DeepCrack.zip``` file to ```data/deepcrack_github/dataset/DeepCrack.zip```
 
 
 

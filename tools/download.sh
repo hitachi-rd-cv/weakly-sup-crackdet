@@ -13,7 +13,7 @@ awk '$0="https://www.irit.fr/~Sylvie.Chambon/TITS/"$0' data/aigle_github/tmp.txt
 
 # # DeepCrack Dataset
 # git clone https://github.com/yhlleo/DeepCrack.git data/deepcrack_github
-# unzip data/deepcrack_github/dataset/DeepCrack.zip -d data/deepcrack_github/dataset
+unzip data/deepcrack_github/dataset/DeepCrack.zip -d data/deepcrack_github/dataset
 
 # format the images
 python3 tools/download.py
